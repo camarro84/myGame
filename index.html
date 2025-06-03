@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Игра "Угадай число"</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Угадай число от 1 до 100</h1>
+      <input
+        id="guessInput"
+        type="number"
+        min="1"
+        max="100"
+        placeholder="Введите число"
+      />
+      <button id="checkBtn">Проверить</button>
+      <button id="restartBtn" style="display: none">Начать заново</button>
+      <p id="message">Введите число от 1 до 100 и нажмите Проверить.</p>
+      <ul id="history"></ul>
+
+      <label for="volumeControl">Громкость музыки:</label>
+      <input
+        type="range"
+        id="volumeControl"
+        min="0"
+        max="1"
+        step="0.01"
+        value="0.2"
+      />
+
+      <button id="toggleMusic">Музыка Вкл/Выкл</button>
+    </div>
+
+    <audio id="gameMusic" src="music/16bit-melody.mp3" loop></audio>
+    <audio id="failSound" src="music/fail-sound.mp3"></audio>
+    <audio id="buttonClick" src="music/button-click.mp3"></audio>
+
+    <script src="js/game.js"></script>
+  </body>
+</html>

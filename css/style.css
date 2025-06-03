@@ -1,0 +1,151 @@
+/* css/style.css */
+
+:root {
+  --bg: #121212;
+  --text: #eee;
+  --accent: #4CAF50;
+  --error: #e74c3c;
+  --warning: #f39c12;
+  --success: #2ecc71;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  background: #1e1e1e;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: var(--accent);
+  font-family: 'Roboto Slab', serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+input[type="number"],
+input[type="range"] {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid #333;
+  background-color: #222;
+  color: var(--text);
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="number"]:focus,
+input[type="range"]:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+}
+
+input.error {
+  border-color: var(--error);
+  box-shadow: 0 0 8px var(--error);
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--accent);
+  border: none;
+  padding: 14px 28px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  margin: 5px;
+  transition: background-color 0.3s ease, transform 0.15s ease, box-shadow 0.3s ease;
+  user-select: none;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.6);
+}
+
+button:hover {
+  background-color: #3a9d3a;
+  box-shadow: 0 6px 14px rgba(58, 157, 58, 0.8);
+}
+
+button:active {
+  background-color: #2d7d2d;
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+p#message {
+  font-size: 1.2rem;
+  min-height: 36px;
+  margin-bottom: 20px;
+  user-select: none;
+  font-family: 'Roboto Slab', serif;
+  transition: opacity 0.3s ease;
+}
+
+ul#history {
+  list-style-type: none;
+  padding-left: 0;
+  max-height: 140px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  color: var(--text);
+  font-size: 0.9rem;
+  text-align: left;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+}
+
+ul#history li {
+  padding: 6px 10px;
+  border-bottom: 1px solid #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 25px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    padding: 12px 22px;
+    font-size: 1rem;
+  }
+}
